@@ -19,7 +19,7 @@ function dataHas(propertyName) {
     const { data = {} } = req.body; 
     const value = data[propertyName];
     if (value) {
-      req.log.trace({ __filename, methodName, valid: true })
+      req.log.trace({ __filename, methodName, valid: true });
       return next();
     }
     const message = `Article must include a ${propertyName}`;
